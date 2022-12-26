@@ -16,6 +16,10 @@
 		21D048A929584D5400174C5D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21D048A729584D5400174C5D /* LaunchScreen.storyboard */; };
 		21D048B429584D5400174C5D /* Recipe_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D048B329584D5400174C5D /* Recipe_AppTests.swift */; };
 		21D048BF29584D5400174C5D /* Recipe_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D048BE29584D5400174C5D /* Recipe_AppUITests.swift */; };
+		21D048D029584D8600174C5D /* ModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D048CF29584D8600174C5D /* ModelManager.swift */; };
+		21D048D229584DA300174C5D /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D048D129584DA300174C5D /* ModelData.swift */; };
+		21D048D429587A1F00174C5D /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D048D329587A1F00174C5D /* Model.swift */; };
+		21D048D62958954B00174C5D /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D048D52958954B00174C5D /* SecondViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,10 @@
 		21D048BA29584D5400174C5D /* Recipe AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Recipe AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		21D048BE29584D5400174C5D /* Recipe_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe_AppUITests.swift; sourceTree = "<group>"; };
 		21D048C029584D5400174C5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		21D048CF29584D8600174C5D /* ModelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelManager.swift; sourceTree = "<group>"; };
+		21D048D129584DA300174C5D /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
+		21D048D329587A1F00174C5D /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		21D048D52958954B00174C5D /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,8 +111,9 @@
 			children = (
 				21D0489929584D5200174C5D /* AppDelegate.swift */,
 				21D0489B29584D5200174C5D /* SceneDelegate.swift */,
-				21D0489D29584D5200174C5D /* ViewController.swift */,
-				21D0489F29584D5200174C5D /* Main.storyboard */,
+				21D048CD29584D6700174C5D /* Model */,
+				21D048CC29584D5E00174C5D /* Controller */,
+				21D048CE29584D7200174C5D /* View */,
 				21D048A529584D5400174C5D /* Assets.xcassets */,
 				21D048A729584D5400174C5D /* LaunchScreen.storyboard */,
 				21D048AA29584D5400174C5D /* Info.plist */,
@@ -129,6 +138,33 @@
 				21D048C029584D5400174C5D /* Info.plist */,
 			);
 			path = "Recipe AppUITests";
+			sourceTree = "<group>";
+		};
+		21D048CC29584D5E00174C5D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				21D0489D29584D5200174C5D /* ViewController.swift */,
+				21D048D52958954B00174C5D /* SecondViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		21D048CD29584D6700174C5D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				21D048CF29584D8600174C5D /* ModelManager.swift */,
+				21D048D129584DA300174C5D /* ModelData.swift */,
+				21D048D329587A1F00174C5D /* Model.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		21D048CE29584D7200174C5D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				21D0489F29584D5200174C5D /* Main.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,10 +297,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21D048D62958954B00174C5D /* SecondViewController.swift in Sources */,
+				21D048D429587A1F00174C5D /* Model.swift in Sources */,
 				21D0489E29584D5200174C5D /* ViewController.swift in Sources */,
 				21D0489A29584D5200174C5D /* AppDelegate.swift in Sources */,
+				21D048D029584D8600174C5D /* ModelManager.swift in Sources */,
 				21D0489C29584D5200174C5D /* SceneDelegate.swift in Sources */,
 				21D048A429584D5200174C5D /* Recipe_App.xcdatamodeld in Sources */,
+				21D048D229584DA300174C5D /* ModelData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
