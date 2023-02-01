@@ -14,6 +14,7 @@ class SecondViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         ingredientsLabel.text = explanation
+        ingredientsLabel.round(cornerRadius: 10, maskToBound: true)
         // Do any additional setup after loading the view.
     }
     
