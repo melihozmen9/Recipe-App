@@ -131,7 +131,6 @@
 				21D048A529584D5400174C5D /* Assets.xcassets */,
 				21D048A729584D5400174C5D /* LaunchScreen.storyboard */,
 				21D048AA29584D5400174C5D /* Info.plist */,
-				21D048A229584D5200174C5D /* Recipe_App.xcdatamodeld */,
 			);
 			path = "Recipe App";
 			sourceTree = "<group>";
@@ -174,6 +173,7 @@
 				21D048D329587A1F00174C5D /* Model.swift */,
 				2162AC15298A54290055B647 /* CategoryModel.swift */,
 				2162AC1F298A77290055B647 /* SubCategoryModel.swift */,
+				21D048A229584D5200174C5D /* Recipe_App.xcdatamodeld */,
 			);
 			path = Model;
 			sourceTree = "<group>";

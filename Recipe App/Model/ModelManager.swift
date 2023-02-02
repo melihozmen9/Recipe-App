@@ -21,7 +21,9 @@ struct ModelManager {
         print(urlString)
         //performRequest(urlString: urlString)
         fetchDetail(URL: urlString) { result in
-           print(result)
+            DispatchQueue.main.async {
+                delegate?.getInfo(info: result)
+            }
             
         }
     }

@@ -6,9 +6,12 @@
 //
 
 import UIKit
-
+import CoreData
 class CategoryViewController: UIViewController {
     var data = [MealData]()
+    var categoryArray = [Category]()
+    var isSegueCame = false
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     @IBOutlet weak var categoryTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,15 +38,34 @@ class CategoryViewController: UIViewController {
         dataTask.resume()
     }
    
-
+    func loadData(request:NSFetchRequest<Category> = Category.fetchRequest() ){
+        do {
+            categoryArray = try context.fetch(request)
+        } catch  {
+            print("Load Error'u : \(error)")
+        }
+        
+    }
 }
 //MARK:- DataSource
 extension CategoryViewController : UITableViewDataSource {
+   
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if isSegueCame == true {
+            return categoryArray.count
+        }
           return data.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if isSegueCame == true {
+            let segueCell = tableView.dequeueReusableCell(withIdentifier: "CategoryCell", for: indexPath) as! CategoryTableViewCell
+            segueCell.categoryLabel.text = categoryArray[indexPath.row].categoryName
+            tableView.reloadData()
+            return segueCell
+        }
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryCell", for:indexPath) as! CategoryTableViewCell
         cell.categoryLabel.text = data[indexPath.row].strCategory
         cell.categoryImage.downloaded(from: data[indexPath.row].strCategoryThumb, contentMode: .scaleToFill)
