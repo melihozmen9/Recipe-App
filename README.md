@@ -20,4 +20,6 @@ An iOS application for listing and viewing meal options.
 
 
 https://user-images.githubusercontent.com/105754659/219019397-83aa26b6-8491-4889-a458-b020510b03eb.mp4
+![Simulator Screen Shot - iPhone 11 - 2023-02-15 at 14 35 25](https://user-images.githubusercontent.com/105754659/219019714-28027a6c-e3af-43be-840d-39585de81604.png)
+![Simulator Screen Shot - iPhone 11 - 2023-02-15 at 14 35 30](https://user-images.githubusercontent.com/105754659/219019798-2cf98d5f-c0fd-41c0-9d96-f4089a8c5f61.png)
 
