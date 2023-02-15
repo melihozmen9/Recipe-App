@@ -9,17 +9,23 @@ import UIKit
 
 class SubTableViewController: UITableViewController {
 
-
+    @IBOutlet var subFoodTableView: UITableView!
+    
     var category : String = ""
     var subData = [SubMealData]()
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = UIColor(red: 1.00, green: 0.80, blue: 0.80, alpha: 1.00)
+        subFoodTableView.backgroundColor = UIColor(red: 1.00, green: 0.80, blue: 0.80, alpha: 1.00)
         fetchSubData(URL: "https://www.themealdb.com/api/json/v1/1/filter.php?c=\(category)") { result in
             self.subData = result.meals
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
         }
+    }
+    @IBAction func backButtonPressed(_ sender: UIBarButtonItem) {
+        
     }
     func fetchSubData(URL url:String, completion:@escaping (SubCategoryModel) -> Void){
         let url = URL(string: url)
@@ -49,6 +55,7 @@ class SubTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SubCategoryCell", for: indexPath) as! SubTableViewCell
         cell.subCategoryLabel.text = subData[indexPath.row].strMeal
         cell.subCategoryImage.downloaded(from: subData[indexPath.row].strMealThumb, contentMode: .scaleToFill)
+        cell.backgroundColor = UIColor(red: 0.94, green: 0.58, blue: 0.17, alpha: 0.30)
         return cell
     }
 //MARK:- TableViewDelegate
@@ -58,7 +65,7 @@ class SubTableViewController: UITableViewController {
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "GoToDetail" {
-            let destinationVC = segue.destination as! ViewController
+            let destinationVC = segue.destination as! FoodController
             if let indexPath = tableView.indexPathForSelectedRow {
                 if subData[indexPath.row].strMeal.contains(" "){
                     let replaced = subData[indexPath.row].strMeal.replacingOccurrences(of: " ", with: "_")

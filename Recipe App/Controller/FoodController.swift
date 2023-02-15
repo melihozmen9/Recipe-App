@@ -6,40 +6,46 @@
 //
 
 import UIKit
-import CoreData
 
-class ViewController: UIViewController,UITextFieldDelegate,ModelManagerDelegate {
-   @IBOutlet weak var searchTextField: UITextField!
+class FoodController: UIViewController,UITextFieldDelegate,ModelManagerDelegate {
+    @IBOutlet weak var subView: UIView!
+    @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var ingredientsLabel: UILabel!
     @IBOutlet weak var foodImage: UIImageView!
     @IBOutlet weak var CategoryButtonLabel: UIButton!
-    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    @IBOutlet weak var instructionsButton: UIButton!
+    
     var segueAction = false
     var modelManager = ModelManager()
     var explanation = ""
     var segueName = ""
     var videoLink = ""
     var foodImageUrl = ""
-    var categoryArray = [Category]()
     override func viewDidLoad() {
         super.viewDidLoad()
         
         searchTextField.delegate = self
         modelManager.delegate = self
-        
-        nameLabel.round(cornerRadius: 10, maskToBound: true)
+        view.backgroundColor = UIColor(red: 1.00, green: 0.80, blue: 0.80, alpha: 1.00)
         foodImage.round(cornerRadius: 10, maskToBound: true)
+        nameLabel.round(cornerRadius: 10, maskToBound: true)
+        nameLabel.backgroundColor = UIColor(red: 1.00, green: 0.92, blue: 0.65, alpha: 1.00)
+        
         ingredientsLabel.round(cornerRadius: 10, maskToBound: true)
-        nameLabel.backgroundColor = UIColor(red: 1.00, green: 0.83, blue: 0.19, alpha: 1.00)
+        ingredientsLabel.backgroundColor = UIColor(red: 0.49, green: 1.00, blue: 0.96, alpha: 1.00)
+        CategoryButtonLabel.round(cornerRadius: 10, maskToBound: true)
+        CategoryButtonLabel.backgroundColor = UIColor(red: 0.51, green: 0.93, blue: 0.93, alpha: 1.00)
+        instructionsButton.round(cornerRadius: 10, maskToBound: true)
+        instructionsButton.backgroundColor = UIColor(red: 1.00, green: 0.69, blue: 0.25, alpha: 0.50)
         
         if segueAction == true {
             modelManager.segueName(name: segueName)
         }
-        
-        
-        print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
-        
+    }
+    
+    @IBAction func backButtonPressed(_ sender: UIBarButtonItem) {
+        self.dismiss(animated: true)
     }
     //MARK:- SearchFood
     @IBAction func searchPressed(_ sender: Any) {
@@ -85,19 +91,14 @@ class ViewController: UIViewController,UITextFieldDelegate,ModelManagerDelegate 
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "secondVC" {
-            let vcDestination = segue.destination as! SecondViewController
+            let vcDestination = segue.destination as! InstructionController
             vcDestination.explanation = self.explanation
         }
         if segue.identifier == "GoToCategory" {
             let vcDestination = segue.destination as! SubTableViewController
             vcDestination.category = CategoryButtonLabel.currentTitle!
         }
-        if segue.identifier == "segueCategory" {
-            let vcDestination = segue.destination as! CategoryViewController
-            vcDestination.isSegueCame = true
-            vcDestination.loadData()
-            
-        }
+      
         
     }
     @IBAction func instructionsPressed(_ sender: UIButton) {
@@ -113,38 +114,8 @@ class ViewController: UIViewController,UITextFieldDelegate,ModelManagerDelegate 
        UIApplication.shared.open(yourURL, options: [:], completionHandler: nil)
     }
     }
-//MARK:- CoreData
-    
-    @IBAction func saveButtonPressed(_ sender: UIButton) {
-        let newCategory = Category(context: self.context)
-      
-        newCategory.categoryName = CategoryButtonLabel.currentTitle
-        
-        
-        categoryArray.append(newCategory)
-        let newFood = FoodDetails(context: self.context)
-        newFood.foodName = nameLabel.text
-        newFood.image = foodImageUrl
-        newFood.ingredients = ingredientsLabel.text
-        newFood.instruction = explanation
-        newFood.videoLink = videoLink
-        newFood.isSaved = true
-        newFood.parentCategory = newCategory
-        newCategory.foodDetail = newFood
-        saveDetails()
-    }
-    func saveDetails(){
-        do {
-            try context.save()
-        } catch  {
-            print(error)
-        }
-    }
-    //MARK:- Segue
-    
-    @IBAction func savedPressed(_ sender: UIButton) {
-        performSegue(withIdentifier: "segueCategory", sender: self)
-    }
+
+  
     
     
 }

@@ -18,7 +18,9 @@ class SubTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        subCategoryLabel.lineBreakMode = .byWordWrapping
+        subCategoryLabel.numberOfLines = 0
+        
         // Configure the view for the selected state
     }
 

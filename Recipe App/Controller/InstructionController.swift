@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class InstructionController: UIViewController {
     var explanation : String?
     @IBOutlet weak var ingredientsLabel: UILabel!
     
@@ -18,10 +18,10 @@ class SecondViewController: UIViewController {
       
     }
     
-    @IBAction func backPressed(_ sender: UIButton) {
-        dismiss(animated: true, completion: nil)
+    @IBAction func backButtonPressed(_ sender: UIBarButtonItem) {
+        self.dismiss(animated: true)
     }
     
-  
+    
 
 }

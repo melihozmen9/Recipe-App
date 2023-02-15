@@ -6,15 +6,14 @@
 //
 
 import UIKit
-import CoreData
 class CategoryViewController: UIViewController {
     var data = [MealData]()
-    var categoryArray = [Category]()
-    var isSegueCame = false
-    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+   
     @IBOutlet weak var categoryTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = UIColor(red: 1.00, green: 0.80, blue: 0.80, alpha: 1.00)
+        categoryTableView.backgroundColor = UIColor(red: 1.00, green: 0.80, blue: 0.80, alpha: 1.00)
         fetchData(URL: "https://www.themealdb.com/api/json/v1/1/categories.php") { result  in
             self.data = result.categories
             DispatchQueue.main.async {
@@ -23,6 +22,9 @@ class CategoryViewController: UIViewController {
         }
     }
     
+    @IBAction func backButtonPressed(_ sender: UIBarButtonItem) {
+    
+    }
     func fetchData(URL url:String, completion: @escaping (CategoryModel)-> Void){
         let url = URL(string: url)
         let session = URLSession.shared
@@ -38,37 +40,24 @@ class CategoryViewController: UIViewController {
         dataTask.resume()
     }
    
-    func loadData(request:NSFetchRequest<Category> = Category.fetchRequest() ){
-        do {
-            categoryArray = try context.fetch(request)
-        } catch  {
-            print("Load Error'u : \(error)")
-        }
-        
-    }
 }
 //MARK:- DataSource
 extension CategoryViewController : UITableViewDataSource {
    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if isSegueCame == true {
-            return categoryArray.count
-        }
+      
           return data.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if isSegueCame == true {
-            let segueCell = tableView.dequeueReusableCell(withIdentifier: "CategoryCell", for: indexPath) as! CategoryTableViewCell
-            segueCell.categoryLabel.text = categoryArray[indexPath.row].categoryName
-            tableView.reloadData()
-            return segueCell
-        }
+
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryCell", for:indexPath) as! CategoryTableViewCell
         cell.categoryLabel.text = data[indexPath.row].strCategory
         cell.categoryImage.downloaded(from: data[indexPath.row].strCategoryThumb, contentMode: .scaleToFill)
+        cell.backgroundColor = UIColor(red: 0.94, green: 0.58, blue: 0.17, alpha: 0.30)
+        
         return cell
     }
     
