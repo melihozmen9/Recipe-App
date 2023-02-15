@@ -17,3 +17,7 @@ An iOS application for listing and viewing meal options.
 * MVC app architecture
 
 ## Sample Screen
+
+
+https://user-images.githubusercontent.com/105754659/219019397-83aa26b6-8491-4889-a458-b020510b03eb.mp4
+
