@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,13 +12,14 @@
 		2162AC18298A58B10055B647 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2162AC17298A58B10055B647 /* CategoryViewController.swift */; };
 		2162AC1A298A60EC0055B647 /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2162AC19298A60EC0055B647 /* CategoryTableViewCell.swift */; };
 		2162AC1C298A75690055B647 /* SubTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2162AC1B298A75690055B647 /* SubTableViewCell.swift */; };
-		2162AC1E298A75950055B647 /* SubTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2162AC1D298A75950055B647 /* SubTableViewController.swift */; };
 		2162AC20298A77290055B647 /* SubCategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2162AC1F298A77290055B647 /* SubCategoryModel.swift */; };
 		2162AC24298AC2C80055B647 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2162AC23298AC2C80055B647 /* MainViewController.swift */; };
+		21834E2D29DEDE530002B20E /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 21834E2C29DEDE530002B20E /* SnapKit */; };
+		21A2643129E01CEF009A168B /* SubCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A2643029E01CEF009A168B /* SubCategoryViewController.swift */; };
+		21A2643329E02DCA009A168B /* ResourcesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A2643229E02DCA009A168B /* ResourcesViewController.swift */; };
 		21D0489A29584D5200174C5D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D0489929584D5200174C5D /* AppDelegate.swift */; };
 		21D0489C29584D5200174C5D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D0489B29584D5200174C5D /* SceneDelegate.swift */; };
 		21D0489E29584D5200174C5D /* FoodController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D0489D29584D5200174C5D /* FoodController.swift */; };
-		21D048A129584D5200174C5D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21D0489F29584D5200174C5D /* Main.storyboard */; };
 		21D048A629584D5400174C5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21D048A529584D5400174C5D /* Assets.xcassets */; };
 		21D048A929584D5400174C5D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21D048A729584D5400174C5D /* LaunchScreen.storyboard */; };
 		21D048B429584D5400174C5D /* Recipe_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D048B329584D5400174C5D /* Recipe_AppTests.swift */; };
@@ -54,14 +55,14 @@
 		2162AC17298A58B10055B647 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		2162AC19298A60EC0055B647 /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
 		2162AC1B298A75690055B647 /* SubTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubTableViewCell.swift; sourceTree = "<group>"; };
-		2162AC1D298A75950055B647 /* SubTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubTableViewController.swift; sourceTree = "<group>"; };
 		2162AC1F298A77290055B647 /* SubCategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubCategoryModel.swift; sourceTree = "<group>"; };
 		2162AC23298AC2C80055B647 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		21A2643029E01CEF009A168B /* SubCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubCategoryViewController.swift; sourceTree = "<group>"; };
+		21A2643229E02DCA009A168B /* ResourcesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourcesViewController.swift; sourceTree = "<group>"; };
 		21D0489629584D5200174C5D /* Recipe App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Recipe App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		21D0489929584D5200174C5D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		21D0489B29584D5200174C5D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		21D0489D29584D5200174C5D /* FoodController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodController.swift; sourceTree = "<group>"; };
-		21D048A029584D5200174C5D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		21D048A529584D5400174C5D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		21D048A829584D5400174C5D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		21D048AA29584D5400174C5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -91,6 +92,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				41046370B07C67B78A5C86E1 /* libPods-Recipe App.a in Frameworks */,
+				21834E2D29DEDE530002B20E /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,10 +174,11 @@
 			isa = PBXGroup;
 			children = (
 				2162AC23298AC2C80055B647 /* MainViewController.swift */,
+				2162AC17298A58B10055B647 /* CategoryViewController.swift */,
 				21D0489D29584D5200174C5D /* FoodController.swift */,
 				21D048D52958954B00174C5D /* InstructionController.swift */,
-				2162AC17298A58B10055B647 /* CategoryViewController.swift */,
-				2162AC1D298A75950055B647 /* SubTableViewController.swift */,
+				21A2643029E01CEF009A168B /* SubCategoryViewController.swift */,
+				21A2643229E02DCA009A168B /* ResourcesViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -195,7 +198,6 @@
 		21D048CE29584D7200174C5D /* View */ = {
 			isa = PBXGroup;
 			children = (
-				21D0489F29584D5200174C5D /* Main.storyboard */,
 				2162AC19298A60EC0055B647 /* CategoryTableViewCell.swift */,
 				2162AC1B298A75690055B647 /* SubTableViewCell.swift */,
 			);
@@ -242,6 +244,9 @@
 			dependencies = (
 			);
 			name = "Recipe App";
+			packageProductDependencies = (
+				21834E2C29DEDE530002B20E /* SnapKit */,
+			);
 			productName = "Recipe App";
 			productReference = 21D0489629584D5200174C5D /* Recipe App.app */;
 			productType = "com.apple.product-type.application";
@@ -315,6 +320,9 @@
 				Base,
 			);
 			mainGroup = 21D0488D29584D5200174C5D;
+			packageReferences = (
+				21834E2B29DEDE530002B20E /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 21D0489729584D5200174C5D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -333,7 +341,6 @@
 			files = (
 				21D048A929584D5400174C5D /* LaunchScreen.storyboard in Resources */,
 				21D048A629584D5400174C5D /* Assets.xcassets in Resources */,
-				21D048A129584D5200174C5D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,12 +436,13 @@
 			files = (
 				21D048D62958954B00174C5D /* InstructionController.swift in Sources */,
 				21D048D429587A1F00174C5D /* Model.swift in Sources */,
+				21A2643329E02DCA009A168B /* ResourcesViewController.swift in Sources */,
 				2162AC1C298A75690055B647 /* SubTableViewCell.swift in Sources */,
 				21D0489E29584D5200174C5D /* FoodController.swift in Sources */,
+				21A2643129E01CEF009A168B /* SubCategoryViewController.swift in Sources */,
 				2162AC16298A54290055B647 /* CategoryModel.swift in Sources */,
 				21D0489A29584D5200174C5D /* AppDelegate.swift in Sources */,
 				21D048D029584D8600174C5D /* ModelManager.swift in Sources */,
-				2162AC1E298A75950055B647 /* SubTableViewController.swift in Sources */,
 				2162AC1A298A60EC0055B647 /* CategoryTableViewCell.swift in Sources */,
 				2162AC24298AC2C80055B647 /* MainViewController.swift in Sources */,
 				21D0489C29584D5200174C5D /* SceneDelegate.swift in Sources */,
@@ -476,14 +484,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		21D0489F29584D5200174C5D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				21D048A029584D5200174C5D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		21D048A729584D5400174C5D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -617,15 +617,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3BX64U658L;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = N3UA862X9S;
 				INFOPLIST_FILE = "Recipe App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.melih.test1.Recipe-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "Melih Özmen Recipe App";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -637,15 +640,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3BX64U658L;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = N3UA862X9S;
 				INFOPLIST_FILE = "Recipe App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.melih.test1.Recipe-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "Melih Özmen Recipe App";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -779,6 +785,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		21834E2B29DEDE530002B20E /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		21834E2C29DEDE530002B20E /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 21834E2B29DEDE530002B20E /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 21D0488E29584D5200174C5D /* Project object */;
 }
